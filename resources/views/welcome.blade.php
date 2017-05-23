@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Sistema UnBSnacks com Laravel</title>
+        <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -46,7 +46,7 @@
             }
 
             .title {
-                font-size: 30px;
+                font-size: 84px;
             }
 
             .links > a {
@@ -68,32 +68,26 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
-                     @if (Auth::check())
+                    @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ url('/login') }}">Acessar</a>
-                        <a href="{{ url('/register') }}">Primeiro acesso</a>
-                        <a href="{{ url('/sobre') }}">Sobre</a>
+                        <a href="{{ url('/login') }}">Login</a>
+                        <a href="{{ url('/register') }}">Register</a>
                     @endif
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Bem vindos ao Sistema UnBSnacks com o framework Laravel!<br>
-                    <h7>Empresários!  </h7><br>
-                    <h7>Cadastre sua lanchonete, anuncie seus produtos e acompanhe as suas avaliações recebidas. </h7><br>
-                    <h7>Usuários! </h7><br>
-                    <h7>Cadastre-se, avelie os serviços das lanchonetes e escolha as melhores opções.  </h7><br>
+                    Laravel
                 </div>
 
                 <div class="links">
-                    <img src="img/imagem aerea unb1.jpg" width="400" alt="Imagem aérea da UnB." />
-                    <!--<a href="https://laravel.com/docs">Documentation</a>
+                    <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>-->
+                    <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
         </div>
