@@ -18,6 +18,25 @@
 
                 <div class="panel-body">
                     Lanchonetes Cadastradas.
+                    Lanchonetes Cadastradas.<br>
+                    <table class="table table-striped">
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    
+                    
+                    @foreach($empresas as $empresa)
+                        <tr>
+                            <td>{{$empresa->eNome}}</td>
+                            <td>{{$empresa->eEndereco}}</td>
+                            <td>{{$empresa->eTelefone1}}</td>
+                            
+
+                        </tr>
+                        <br>
+
+                    @endforeach
+                    </table>
                 </div>
             </div>
         </div>

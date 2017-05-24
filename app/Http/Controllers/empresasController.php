@@ -9,7 +9,9 @@ class empresasController extends Controller
 {
     public function empresas()
     {
-        return view('empresas');
+        //return view('empresas');
+        $empresa = empresa::get();
+        return view('empresas', ['empresas' => $empresa]);
     }
     public function formulario()
     {
@@ -29,6 +31,7 @@ class empresasController extends Controller
         //return Redirect::to('empresas/salvar');
         //Redirect::to('empresas.salvar');
            return view ('empresas.formulario'); 
+
 
     }
     public function empresaslista()
