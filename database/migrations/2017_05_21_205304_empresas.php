@@ -14,7 +14,7 @@ class Empresas extends Migration
     public function up()
     {
         Schema::create('empresas', function (Blueprint $table) {
-            $table->increments('eCodigo');
+            $table->increments('id');
             $table->string('eNome');
             $table->string('eResponsavel');
             $table->string('eCNPJ')->unique();
