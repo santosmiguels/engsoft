@@ -10,7 +10,7 @@
                     <p>Área da empresa</p>
                     <li>
                     <!--<a href="{{ url('/empresas/novas')}}">Cadastrar nova empresa</a>-->
-                    <a href="{{ url('/empresas')}}">Alterar empresa</a>
+                    <a href="{{ url('/empresas/alterarempresas')}}">Alterar empresa</a>
                     <a href="{{ url('/empresas')}}">Remover empresa</a>
                     <a class="pull-rigth" href="{{ url('/home')}}">Pag Inicial</a>
                     </li>

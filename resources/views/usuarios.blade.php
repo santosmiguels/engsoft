@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                
+                                
                     <p>Sistema UnBSnacks<p>
                     <p>Área do usuário</p>
                     <li>
@@ -22,6 +22,9 @@
                     <th>Nome</th>
                     <th>Endereço</th>
                     <th>Telefone</th>
+                    <th>Avaliações</th>
+                    <th>Menu de opções</th>
+
                     
                     
                     @foreach($empresas as $empresa)
@@ -29,6 +32,7 @@
                             <td>{{$empresa->eNome}}</td>
                             <td>{{$empresa->eEndereco}}</td>
                             <td>{{$empresa->eTelefone1}}</td>
+                            
                             
 
                         </tr>

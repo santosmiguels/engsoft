@@ -46,7 +46,7 @@
             }
 
             .title {
-                font-size: 30px;
+                font-size: 20px;
             }
 
             .links > a {
@@ -71,9 +71,18 @@
                      @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ url('/login') }}">Acessar</a>
-                        <a href="{{ url('/register') }}">Primeiro acesso</a>
+                        <a href="{{ url('admin/login') }}">Entrar como usuário</a>
+                        <a href="{{ url('adminemp/login') }}">Entrar como Empresa</a>
+                        <!--<a href="{{ url('/register') }}">Novo Registro</a>-->
+                        <a href="{{ route('contato') }}">Contato</a>
                         <a href="{{ url('/sobre') }}">Sobre</a>
+
+                        
+
+                        <!--<a href="{{ url('/login') }}">Acessar</a>
+                        <a href="{{ url('/register') }}">Primeiro acesso</a>
+                        <a href="{{ route('contato') }}">Contato</a>
+                        <a href="{{ url('/sobre') }}">Sobre</a>-->
                     @endif
                 </div>
             @endif

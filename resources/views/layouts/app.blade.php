@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,10 +43,14 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Acessar</a></li>
-                            <li><a href="{{ route('register') }}">Primeiro acesso</a></li>
-                            <li><a href="{{ route('sobre') }}">Sobre</a></li>
-                            
+                            <!--<li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Register</a></li>-->
+                            <li><a href="{{ url('admin/login') }}">Entrar como usuário</a></li>
+                            <li><a href="{{ url('adminemp/login') }}">Entrar como Empresa</a></li>
+                            <!--<a href="{{ url('/register') }}">Novo Registro</a>-->
+                            <li><a href="{{ url('contato') }}">Contato</a></li>
+                            <li><a href="{{ url('/sobre') }}">Sobre</a></li>
+
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
