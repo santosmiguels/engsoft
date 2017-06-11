@@ -102,7 +102,7 @@ class clienteController extends Controller
      public function listacliente() 
    {
     $empresas = empresa::get(); 
-    return view('lista', ['empresas' => $empresas]);
+    return view('cliente.lista', ['empresas' => $empresas]);
     //return redirect ('lista');
    }
    public function clienteatualizar(Request $request, $id)

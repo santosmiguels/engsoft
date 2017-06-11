@@ -149,7 +149,7 @@ class empresaController extends Controller
      public function listaempresa() 
    {
     $empresas = empresa::get(); 
-    return view('lista', ['empresas' => $empresas]);
+    return view('empresa.lista', ['empresas' => $empresas]);
     //return redirect ('lista');
    }
 
@@ -183,6 +183,11 @@ class empresaController extends Controller
       else
         return view('empresa.formulario', ['empresa' => $empresa]);
     
+    }
+
+    public function avaliaempresa()
+    {
+        return view('empresa.avaliaempresa');
     }
    
 }

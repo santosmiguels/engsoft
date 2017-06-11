@@ -9,7 +9,7 @@
                 <ul>
                     <a href="adminemp/{{Auth::user()->id}}/alteraempresa" class="btn btn-primary">Alterar dados da empresa</a>
                     <a href="{{ url('adminemp/')}}" class="btn btn-primary">Remover a empresa</a>
-                    <a href="{{ url('adminemp/')}}" class="btn btn-primary">Pag Inicial</a>
+                    <a href="{{ url('adminemp/')}}" class="btn btn-primary">Pag Inicial da emrpesa</a>
                 </ul>   
                 <ul>
                 <a href="{{ url('adminemp/alteraempresa')}}" class="btn btn-primary">Minhas avaliações recebidas</a>

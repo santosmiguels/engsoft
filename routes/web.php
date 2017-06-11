@@ -27,13 +27,15 @@ Route::group(['middleware' => 'cliente'], function (){
 	Route::get('/admin/registrarcliente', 'clienteController@registrarcliente');
 	Route::get('/admin/validador', 'clienteController@validador');
 	Route::any('/admin/clientesalvar', 'clienteController@clientesalvar')->name('clientesalvar');
+
+
 	Route::group(['middleware' => 'auth:cliente'], function (){
 	Route::get('/admin', 'clienteController@index');
 	Route::get('/admin/{cliente}/alteracliente', 'clienteController@alteracliente')->name('alteracliente');
 	Route::get('/admin/avaliaempresa', 'clienteController@avaliaempresa')->name('avaliaempresa');
 	Route::get('/admin/listacliente', 'clienteController@listacliente')->name('listacliente');
 	Route::any('admin/{cliente}', 'clienteController@clienteatualizar')->name('clienteatualizar');
-	
+	Route::get('/admin/avaliarempresa', 'clienteController@avaliarempresa')->name('avaliarempresa');
 	//Route::get('/admin/login', 'clienteController@login');
 	//Route::post('/admin/login', 'clienteController@postlogin');
 	//Route::get('/admin/logout', 'clienteController@logout');
@@ -49,11 +51,15 @@ Route::group(['middleware' => 'empresa'], function (){
 	//Route::any('/adminemp/empresasalvar', 'empresaController@empresasalvar')->name('empresasalvar');
 	Route::get('/adminemp/registrarempresa', 'empresaController@registrarempresa');
 	Route::get('/adminemp/validador', 'empresaController@validador');
+
 	Route::group(['middleware' => 'auth:empresa'], function (){
+
+
 	Route::get('/adminemp', 'empresaController@index');
 	Route::get('/adminemp/{empresa}/alteraempresa', 'empresaController@alteraempresa')->name('alteraempresa');
 	Route::get('/adminemp/listaempresa', 'empresaController@listaempresa')->name('listaempresa');
 	Route::any('adminemp/{empresa}', 'empresaController@empresaatualizar')->name('empresaatualizar');
+	Route::get('/adminemp/avaliarempresa', 'empresaController@avaliarempresa')->name('avaliarempresa');
 	//Route::get('/admin/login', 'clienteController@login');
 	//Route::post('/admin/login', 'clienteController@postlogin');
 	//Route::get('/admin/logout', 'clienteController@logout');

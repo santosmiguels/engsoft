@@ -5,7 +5,10 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Registro de nova empresa</div>
+                <div class="panel-heading">
+                Registro de novas empresas
+                <a href="{{ url('adminemp/')}}" class="btn btn-primary">Pag Inicial da empresa</a></p>    
+                </div>
                 <div class="panel-body">
 
 

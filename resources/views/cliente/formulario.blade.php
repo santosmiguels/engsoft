@@ -5,16 +5,20 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Registro de novo cliente</div>
+                <div class="panel-heading">Registro do cliente
+                        <a href="{{ url('admin/')}}" class="btn btn-primary">Pag Inicial do usuário</a>
+                </div>
                 <div class="panel-body">
 
 
                 @if(Request::is('*/alteracliente'))                    
                     
                     {{'ALTERAÇÃO DE DADOS'}} 
+                    
                      <form class="form-horizontal" role="form" method="PATCH" action="{{ url('admin/'.$cliente->id) }}">
                 @else
                     {{'NOVO CADASTRO'}} 
+                    
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('clientesalvar') }}">
 
 
