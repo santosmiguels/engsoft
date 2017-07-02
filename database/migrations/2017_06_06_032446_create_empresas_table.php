@@ -14,12 +14,12 @@ class CreateEmpresasTable extends Migration
     public function up()
     {
         Schema::create('empresas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();;
             $table->string('name');
             $table->string('email', 100)->unique();
             $table->string('password');
             $table->string('eResponsavel');
-            $table->string('eCNPJ');
+            $table->string('eCNPJ', 14)->unique();
             $table->string('eTelefone1');
             $table->string('eTelefone2');
             $table->string('eEndereco');

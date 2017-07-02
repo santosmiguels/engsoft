@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>UnBSnacks</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style-portfolio.css">
+        <link rel="stylesheet" href="css/picto-foundry-food.css" />
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="icon" href="favicon-1.ico" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="row">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">UnBSnacks</a>
+                        <img src="images/unbsnackslogo.png" width="53" height="45">
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav main-nav  clear navbar-right ">
+                            <li><a class="navactive color_animation" href="#top">Home</a></li>
+                            <li><a class="color_animation" href="#story">Sobre</a></li>
+                            <li><a class="color_animation" href="#pricing">Preços</a></li>
+                            <li><a class="color_animation" href="#beer">Banca</a></li>
+                            <li><a class="color_animation" href="#bread">Pães</a></li>
+                            <li><a class="color_animation" href="#featured">Os melhores</a></li>
+                            <li><a class="color_animation" href="#reservation">BLA </a></li>
+                            <li><a class="color_animation" href="#contact">Contato</a></li>
+                            <li><a class="color_login" href="#top" data-toggle="modal" data-target="#myModal">Entrar</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+
+		<div class="container">
+		<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+							    
+				<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">
+
+							<div class="container">
+								<div>
+								<button id="butt2" type="radio" class="btn btn-primary" onclick="$('#demo').toggleClass('hidden');" data-toggle="collapse" data-target="#demo2">Login/Cadastro
+								</button>
+								</div>
+
+							</div>
+
+							</h4>
+						</div>
+						<div class="modal-body">
+							<div id="demo" class="collapse in">
+								<p><strong>Login</strong></p><br>
+								<form name="Cadastro" action="./logIn.php" method="POST">
+									<p><input type="text" class="form-control" name="User" placeholder="Usuário"></p>
+									<p><input type="password" class="form-control" name="Pass" placeholder="Senha"></p><br>
+									<p><button style="margin-left:44%" type="submit" class="btn btn-primary" href="#" target="_blank">Enviar</button></p>
+								</form>
+								<p><a style="margin-left:36%" href="#" target="_blank">Esqueci minha senha</a></p>
+							</div>
+							<div id="demo2" class="collapse">
+								<p><strong>Cadastro</strong></p><br>
+								<p>Vínculo: 
+								<input id="opt1" type="radio" class="hidden" name="optradio" onclick="$('#opt1').addClass('hidden');$('#opt2').removeClass('hidden');" data-toggle="collapse" data-target="#user,#comp" checked="checked"> Usuário
+								<input id="opt2" type="radio" name="optradio" onclick="$('#opt2').addClass('hidden');$('#opt1').removeClass('hidden');" data-toggle="collapse" data-target="#comp,#user"> Lanchonete
+								</p><br>
+								<div id="user" class="collapse in">
+									<form name="Cadastro" action="./regUser.php" method="POST">
+										<p><input type="text" class="form-control" name="Nome" placeholder="Nome"></p>
+										<p><input type="email" class="form-control" name="Email" placeholder="E-mail"></p>
+										<p><input type="tel" class="form-control" name="Tel" placeholder="Telefone"></p>
+                                        <p><input type="number" class="form-control" name="CPF" placeholder="CPF"></p>
+                                        <p><input type="date" class="form-control" name="Nasc" placeholder="Nasc"></p><br>
+										<p><input type="text" class="form-control" name="Login" placeholder="Login"></p>
+										<p><input type="password" class="form-control" name="Senha" placeholder="Senha"></p><br>
+										<p><input type="submit" class="btn btn-primary form-control" href="#" target="_blank"></p>
+									</form>
+								</div>
+								<div id="comp" class="collapse">
+									<form name="Cadastro2" action="./regComp.php" method="POST">
+										<p><input type="text" class="form-control" name="Nome" placeholder="Nome da Empresa"></p>
+										<p><input type="text" class="form-control" name="NomeR" placeholder="Nome do Responsável"></p>
+                                        <p><input type="number" class="form-control" name="CNPJ" placeholder="CNPJ"></p>
+                                        <p><input type="email" class="form-control" name="Email" placeholder="E-mail"></p>
+										<p><input type="tel" class="form-control" name="Tel" placeholder="Telefone"></p>
+										<p><input type="text" class="form-control" name="End" placeholder="Endereço"></p><br>
+										<p><input type="text" class="form-control" name="Login" placeholder="Login"></p>
+										<p><input type="password" class="form-control" name="Senha" placeholder="Senha"></p><br>
+										<p><input type="submit" class="btn btn-primary form-control" href="#" target="_blank"></p>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>      
+				</div>
+			</div>
+		</div>
+
+        <div id="top" class="starter_container bg">
+            <div class="follow_container">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2 class="top-title"> UnBSnacks </h2>
+                    <h2 class="white second-title">Encontre o melhor salgado para sua melhor hora!</h2>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ About Us ============= -->
+
+        <section id="story" class="description_content">
+            <div class="text-content container">
+                <div class="col-md-6">
+                    <h1>Sobre</h1>
+                    <div class="fa fa-cutlery fa-2x"></div>
+                    <p class="desc-text">Somos parte de um trabalho universitário de Engenharia de Software. Este projeto tem como intuito expor as lanchonetes da Universidade de Brasília, bem como suas notas e preços que serão dadas por vocês, alunos, professores, etc.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-section">
+                       <img src="images/Lanchonete1.jpg" width="250" height="220">
+                       <img src="images/Lanchonete2.jpg" width="250" height="220">
+                       <div class="img-section-space"></div>
+                       <img src="images/Lanchonete3.jpg"  width="250" height="220">
+                       <img src="images/Lanchonete4.jpg"  width="250" height="220">
+                   </div>
+                </div>
+            </div>
+        </section>
+
+
+       <!-- ============ Pricing  ============= -->
+
+        <section id ="pricing" class="description_content">
+             <div class="pricing background_content">
+                <h1 class="shadow"><span>Melhores</span> preços</h1>
+             </div>
+            <div class="text-content container">
+                <div class="container">
+                    <div class="row">
+                        <div id="w">
+                            <!--<ul id="filter-list" class="clearfix">
+                                <li class="filter" data-filter="all">All</li>
+                                <li class="filter" data-filter="breakfast">Breakfast</li>
+                                <li class="filter" data-filter="special">Special</li>
+                                <li class="filter" data-filter="desert">Desert</li>
+                                <li class="filter" data-filter="dinner">Dinner</li>
+                            </ul> --> <!-- @end #filter-list -->
+                            <ul id="portfolio">
+                                <li class="item breakfast"><img src="images/food_icon01.jpg" alt="Food" >
+                                    <h2 class="white">R$X,XX</h2>
+                                </li>
+
+                                <li class="item dinner special"><img src="images/food_icon01.jpg" alt="Food" >
+                                    <h2 class="white">R$X,XX</h2>
+                                </li>
+                                <li class="item dinner breakfast"><img src="images/food_icon01.jpg" alt="Food" >
+                                    <h2 class="white">R$X,XX</h2>
+                                </li>
+                                <li class="item special"><img src="images/food_icon01.jpg" alt="Food" >
+                                    <h2 class="white">R$X,XX</h2>
+                                </li>
+                                <li class="item dinner"><img src="images/food_icon01.jpg" alt="Food" >
+                                    <h2 class="white">R$X,XX</h2>
+                                </li>
+                                <li class="item special"><img src="images/food_icon01.jpg" alt="Food" >
+                                    <h2 class="white">R$X,XX</h2>
+                                </li>
+                                <li class="item desert"><img src="images/food_icon01.jpg" alt="Food" >
+                                    <h2 class="white">R$X,XX</h2>
+                                </li>
+                                <li class="item desert breakfast"><img src="images/food_icon01.jpg" alt="Food" >
+                                    <h2 class="white">R$X,XX</h2>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============  Beer  ============= -->
+
+
+        <section id ="beer" class="description_content">
+            <div  class="beer background_content">
+                <h1 class="shadow">Ótimo <span>lugar</span> para se distrair.</h1>
+            </div>
+            <div class="text-content container">
+                <div class="col-md-5">
+					<div class="map_colina">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d339.4022834156427!2d-47.874459096102235!3d-15.756507906784808!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3542a7779945b2ac!2sBanca+Colina+UNB+-+Banca+DNPM!5e0!3m2!1spt-BR!2sbr!4v1496850656125" width="520" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+                   <!--<div class="img-section">
+                       <img src="images/beer_spec.jpg" width="100%">
+                   </div>-->
+                </div>
+                <br>
+                <div class="col-md-6 col-md-offset-1">
+                    <h1>Amador de Cerveja?</h1>
+                    <div class="icon-beer fa-2x"></div>
+                    <p class="desc-text">Professor cancelou a aula em cima da hora? Bateu a depressão? Foi Jubilado?
+					Próximo à universidade temos apenas um local onde vende-se cerveja. Chama-se <b>Colina</b>, uma banca de revista que também vende algumas guloseimas.
+					Vai lá desabafar!</p>
+                </div>
+            </div>
+        </section>
+
+
+       <!-- ============ Our Bread  ============= -->
+
+
+        <section id="bread" class=" description_content">
+            <div  class="bread background_content">
+                <h1 class="shadow"><span>Menu</span> do café da manhã.</h1>
+            </div>
+            <div class="text-content container">
+                <div class="col-md-6">
+                    <h1>Lanches para manhã</h1>
+                    <div class="icon-bread fa-2x"></div>
+                    <p class="desc-text">Bla bla bla.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/bread1.jpg" width="260" alt="Bread">
+                    <img src="images/bread1.jpg" width="260" alt="Bread">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ============ Featured Dish  ============= -->
+
+        <section id="featured" class="description_content">
+            <div  class="featured background_content">
+                <h1 class="shadow"><span>Menu</span> do R.U.</h1>
+            </div>
+            <div class="text-content container">
+                <div class="col-md-6">
+                    <h1>Calendário</h1>
+                    <div class="icon-hotdog fa-2x"></div>
+                    <!--<p class="desc-text">BLA BLA BLA BLA</p>--> 	
+					<a href="http://www.ru.unb.br/images/Cardapio/Cardpio%20Maio%202017%20semana%20da%20africa.xlsx%20-%2004%20SEMANA%20ultima%20alterao.pdf" target="_blank"><p class="calendarioRU">22/05/2017 a 28/05/2017</p></a>
+					<a href="http://www.ru.unb.br/images/Cardapio/Cardpio%20Maio%202017%20-1%20SEMANA%20Junho.pdf" target="_blank"><p class="calendarioRU">29/05/2017 a 04/06/2017</p></a>
+					<a href="http://www.ru.unb.br/images/Cardapio/Cardpio%20Junho%202017.xlsx%20-%2002%20SEMANA%20junho.pdf" target="_blank"><p class="calendarioRU">05/06/2017 a 11/06/2017</p></a>
+					<a href="http://www.ru.unb.br/images/Cardapio/Cardpio%20Junho%202017.xlsx%20-%2003%20SEMANA%20junho.pdf" target="_blank"><p class="calendarioRU">12/06/2017 a 18/06/2017</p></a>
+					<a href="http://www.ru.unb.br/images/Cardapio/Cardpio%20Junho%202017.xlsx%20-%2004%20SEMANA%20junho.pdf" target="_blank"><p class="calendarioRU">19/06/2017 a 25/06/2017</p></a>
+					<a href="http://www.ru.unb.br/images/Cardapio/Cardpio%20Junho%202017.xlsx%20-%2005%20SEMANA%20junho.pdf" target="_blank"><p class="calendarioRU">26/06/2017 a 02/07/2017</p></a>
+                </div>
+                <div class="col-md-6">
+                    <ul class="image_box_story2">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="images/slider1.jpg"  alt="...">
+                                    <div class="carousel-caption">
+
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/slider2.jpg" alt="...">
+                                    <div class="carousel-caption">
+
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/slider3.JPG" alt="...">
+                                    <div class="carousel-caption">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- ============ Social Section  ============= -->
+
+        <section class="social_connect">
+            <div class="text-content container">
+                <div class="col-md-6">
+                    <span class="social_heading">Siga</span>
+                    <ul class="social_icons">
+                        <li><a class="icon-twitter color_animation" href="#" target="_blank"></a></li>
+                        <li><a class="icon-github color_animation" href="#" target="_blank"></a></li>
+                        <li><a class="icon-linkedin color_animation" href="#" target="_blank"></a></li>
+                        <li><a class="icon-mail color_animation" href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <span class="social_heading">Contate-nos</span>
+                    <span class="social_info"><a class="color_animation">teste@teste.com</a></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Contact Section  ============= -->
+
+        <section id="contact">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.772736136834!2d-47.87281978462758!3d-15.763157289070708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a398265a2d027%3A0x9431d651ab4c1104!2sUniversidade+de+Bras%C3%ADlia!5e0!3m2!1spt-BR!2sbr!4v1495418660608" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="inner contact">
+                            <!-- Form Area -->
+                            <div class="contact-form">
+                                <!-- Form -->
+                                <form id="contact-us" method="post" action="contact.php">
+                                    <!-- Left Inputs -->
+                                    <div class="col-md-6 ">
+                                        <!-- Name -->
+                                        <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                                        <!-- Email -->
+                                        <input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />
+                                        <!-- Subject -->
+                                        <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                                    </div><!-- End Left Inputs -->
+                                    <!-- Right Inputs -->
+                                    <div class="col-md-6">
+                                        <!-- Message -->
+                                        <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                                    </div><!-- End Right Inputs -->
+                                    <!-- Bottom Submit -->
+                                    <div class="relative fullwidth col-xs-12">
+                                        <!-- Send Button -->
+                                        <button type="submit" id="submit" name="submit" class="form-btn">Enviar Mensagem</button>
+                                    </div><!-- End Bottom Submit -->
+                                    <!-- Clear -->
+                                    <div class="clear"></div>
+                                </form>
+                            </div><!-- End Contact Form Area -->
+                        </div><!-- End Inner -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Footer Section  ============= -->
+
+        <footer class="sub_footer">
+            <div class="container">
+                <div class="col-md-4"><p class="sub-footer-text text-center">&copy; AAAAAAAAAAAAAAAAA <a href="https://google.com/">Google</a></p></div>
+                <div class="col-md-4"><p class="sub-footer-text text-center">Voltar para o <a href="#top">TOPO</a></p>
+                </div>
+                <div class="col-md-4"><p class="sub-footer-text text-center">Trabalho da <a href="#" target="_blank">UnB</a></p></div>
+            </div>
+        </footer>
+
+
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"> </script>
+        <script type="text/javascript" src="js/bootstrap.min.js" ></script>
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js" ></script>
+        <script type="text/javascript" src="js/main.js" ></script>
+
+    </body>
+</html>

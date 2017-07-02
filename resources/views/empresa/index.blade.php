@@ -20,9 +20,8 @@
                 </div>    
 
                 <div class="panel-body"> 
-             
-
-
+                <img src="img/lanche3.jpg" width="700" alt="Imagem de um sanduiches." />
+                
                 </div>
             </div>
         </div>

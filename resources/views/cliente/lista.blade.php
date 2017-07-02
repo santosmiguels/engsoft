@@ -32,16 +32,18 @@
                     <th>Nome</th>
                     <th>Endereço</th>
                     <th>Telefone</th>
-                    <th>Avaliações</th>
+                    <th>Avaliar</th>
                     <th>Menu de opções</th>
+                    <th>Avaliações recebidas</th>
                     <tbody>
                     @foreach($empresas as $empresa)
                         <tr>
                             <td>{{ $empresa->name }}</td>
                             <td>{{ $empresa->eEndereco }}</td>
                             <td>{{ $empresa->eTelefone1 }}</td>
-                            <td><a href="{{ url('admin/avaliaempresa')}}" class="btn btn-primary">Avaliações</td>
+                            <td><a href="{{ url('admin/avaliaempresa')}}" class="btn btn-primary">Avaliar</td>
                             <td><button class="btn btn-sm">Cardápio</td></button></td>
+                            <td><button class="btn btn-sm">Ver avaliações</td></button></td>
                         </tr>
                     @endforeach    
                     </tbody>    

@@ -109,7 +109,7 @@
                             <label for="cNascimento" class="col-md-4 control-label">Data de Nascimento</label>
 
                             <div class="col-md-6">
-                                <input id="cNascimento" type="text" class="form-control" name="cNascimento" value="{{ $cliente->cNascimento or old('cNascimento') }}" required autofocus>
+                                <input id="cNascimento" type="date" class="form-control" name="cNascimento" value="{{ $cliente->cNascimento or old('cNascimento') }}" required autofocus>
 
                                 @if ($errors->has('cNascimento'))
                                     <span class="help-block">
@@ -124,7 +124,7 @@
                             <label for="cCadastro" class="col-md-4 control-label">Data do Cadastro</label>
 
                             <div class="col-md-6">
-                                <input id="cCadastro" type="text" class="form-control" name="cCadastro" value="{{ $cliente->cCadastro or old('cCadastro') }}" required autofocus>
+                                <input id="cCadastro" type="date" class="form-control" name="cCadastro" value="{{ $cliente->cCadastro or old('cCadastro') }}" required autofocus>
 
                                 @if ($errors->has('cCadastro'))
                                     <span class="help-block">

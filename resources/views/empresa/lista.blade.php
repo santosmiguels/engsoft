@@ -32,8 +32,9 @@
                     <th>Nome</th>
                     <th>Endereço</th>
                     <th>Telefone</th>
-                    <th>Avaliações</th>
+                    <th>Avaliar</th>
                     <th>Menu de opções</th>
+                    <th>Avaliações recebidas</th>
                     <tbody>
                     @foreach($empresas as $empresa)
                         <tr>

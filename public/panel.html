@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<?php
+session_start();
+
+if (!isset($_SESSION['logg']) || $_SESSION['logg']!=1) {
+    echo"<script language='javascript' type='text/javascript'>
+        alert('Área restrita!');
+        window.location.href='index.html';
+    </script>";
+}
+
+$nome = $_SESSION['name'];
+$mail = $_SESSION['email'];
+$tel = $_SESSION['nbr'];
+$cpf = $_SESSION['code'];
+$data = $_SESSION['datanasc'];
+$foto = $_SESSION['img'];
+?>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>UnBSnacks</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style-portfolio.css">
+        <link rel="stylesheet" href="css/picto-foundry-food.css" />
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="icon" href="favicon-1.ico" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="row">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">UnBSnacks</a>
+                        <img src="images/unbsnackslogo.png" width="53" height="45">
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <form action="./logIn.php" method="POST">
+                            <ul class="nav navbar-nav main-nav clear navbar-right">
+                                <li><a class="navactive color_animation" href="./index.html">Home</a></li>
+                                <li><a><button class="color_login btn3" name="logOut" href="#"><b>Sair</b></button></a></li>
+                            </ul>
+                        </form>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <!-- ============ About Us ============= -->
+        
+        <div id="top"></div>
+        <section id="story" class="description_content">
+            <div class="text-content container">
+                <div class="col-md-4">
+                    <h2>Perfil Usuário</h2><br>
+                    <?php if ($foto != NULL){
+                    		echo '<img src="data:image/png;base64,'.base64_encode($foto).'" alt="Image alt" width="250" height="220" style="box-shadow:0 4px 10px 0 rgba(0,0,0,0.3); border: #f1f1f1 Solid 7px;" />';
+                    	} else {
+                    		echo '<img src="images/github.png" width="250" height="220" style="box-shadow:0 4px 10px 0 rgba(0,0,0,0.3); border: #f1f1f1 Solid 7px;">';
+                    	}
+                    ?><br><br>
+                    <p class="desc-text"><b>Nome:</b> <?php echo $nome; ?> <button class="btn2 transparent" href="#">&#9998;</button><br>
+                    <b>E-mail:</b> <?php echo $mail; ?> <button class="btn2 transparent" href="#">&#9998;</button><br>
+                    <b>Telefone:</b> <?php echo $tel; ?> <button class="btn2 transparent" href="#">&#9998;</button><br>
+                    <b>CPF:</b> <?php echo $cpf; ?> <button class="btn2 transparent" href="#">&#9998;</button><br>
+                    <b>Data de Nascimento:</b> <?php echo $data; ?> <button class="btn2 transparent" href="#">&#9998;</button><br>
+                    <button class="btn2 transparent btn-secundary" data-toggle="collapse" data-target="#change">Alterar Login/Senha</button><br><br><br></p>
+                </div>
+                <div class="col-md-8">
+                    <h2>Minhas Avaliações</h2><br>
+
+                    <div class="jj-container" style="width:50%;float: left; padding: 10px;">
+                      <div class="jj-card-4">
+                        <header class="jj-container jj-light-grey">
+                          <h3>Lanchonete da tia</h3>
+                        </header>
+                        <div class="jj-container"><br>
+                          <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                          <hr>
+                          <img src="images/kabob.jpg" alt="Avatar" class="jj-left jj-circle jj-margin-right" style="width:60px">
+                          <p>Gostei muito, porem achei Salgado demais as tapiocas</p><br>
+                        </div>
+                        <button class="jj-button jj-block jj-dark-grey">Ir à loja</button>
+                      </div>
+                    </div>
+
+                    <div class="jj-container" style="width:50%;float: left;padding: 10px;">
+                      <div class="jj-card-4">
+                        <header class="jj-container jj-light-grey">
+                          <h3>Lanchonete do tio</h3>
+                        </header>
+                        <div class="jj-container"><br>
+                          <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                          <hr>
+                          <img src="images/limes.jpg" alt="Avatar" class="jj-left jj-circle jj-margin-right" style="width:60px">
+                          <p>Uma das melhores pizzas da cidade.maravilhosa!!! chegou rápido e bem recheada</p><br>
+                        </div>
+                        <button class="jj-button jj-block jj-dark-grey">Ir à loja</button>
+                      </div>
+                    </div>
+
+                    <div class="jj-container" style="width:50%;float: left;padding: 10px;">
+                      <div class="jj-card-4">
+                        <header class="jj-container jj-light-grey">
+                          <h3>Lanchonete do tio</h3>
+                        </header>
+                        <div class="jj-container"><br>
+                          <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                          <hr>
+                          <img src="images/radish.jpg" alt="Avatar" class="jj-left jj-circle jj-margin-right" style="width:60px">
+                          <p>Comida muito boa! recomendo.</p><br>
+                        </div>
+                        <button class="jj-button jj-block jj-dark-grey">Ir à loja</button>
+                      </div>
+                    </div>
+
+                    <div class="jj-container" style="width:50%;float: left;padding: 10px;">
+                      <div class="jj-card-4">
+                        <header class="jj-container jj-light-grey">
+                          <h3>Lanchonete do jovem</h3>
+                        </header>
+                        <div class="jj-container"><br>
+                          <p>&#9733;&#9734;&#9734;&#9734;&#9734;</p>
+                          <hr>
+                          <img src="images/corn.jpg" alt="Avatar" class="jj-left jj-circle jj-margin-right" style="width:60px">
+                          <p>Mais uma vez fui agraciado com um delicioso lanche, o BaconZ Duplo é um dos melhores burguês que já tive a oportunidade de degustar, recomendo a todos os usuários do aplicativo iFood.</p><br>
+                        </div>
+                        <button class="jj-button jj-block jj-dark-grey">Ir à loja</button>
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Social Section  ============= -->
+
+        <section class="social_connect">
+            <div class="text-content container">
+                <div class="col-md-6">
+                    <span class="social_heading">Siga</span>
+                    <ul class="social_icons">
+                        <li><a class="icon-twitter color_animation" href="#" target="_blank"></a></li>
+                        <li><a class="icon-github color_animation" href="#" target="_blank"></a></li>
+                        <li><a class="icon-linkedin color_animation" href="#" target="_blank"></a></li>
+                        <li><a class="icon-mail color_animation" href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <span class="social_heading">Contate-nos</span>
+                    <span class="social_info"><a class="color_animation">teste@teste.com</a></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Footer Section  ============= -->
+
+        <footer class="sub_footer">
+            <div class="container">
+                <div class="col-md-4"><p class="sub-footer-text text-center">&copy; Versão <a href="#">1.3</a></p></div>
+                <div class="col-md-4"><p class="sub-footer-text text-center">Voltar para o <a href="#top">TOPO</a></p>
+                </div>
+                <div class="col-md-4"><p class="sub-footer-text text-center">Trabalho da <a href="#" target="_blank">UnB</a></p></div>
+            </div>
+        </footer>
+
+
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"> </script>
+        <script type="text/javascript" src="js/bootstrap.min.js" ></script>
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js" ></script>
+        <script type="text/javascript" src="js/main.js" ></script>
+
+    </body>
+</html>

@@ -28,8 +28,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" >UnBSnacks
+                        <!--{{ config('app.name', 'Laravel') }}href="{{ url('/') }}-->
                     </a>
                 </div>
 
@@ -47,10 +47,10 @@
                             <li><a href="{{ route('register') }}">Register</a></li>-->
                             <li><a href="{{ url('admin/login') }}">Entrar como usuário</a></li>
                             <li><a href="{{ url('adminemp/login') }}">Entrar como Empresa</a></li>
-                            <!--<a href="{{ url('/register') }}">Novo Registro</a>-->
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <!--<a href="{{ url('/register') }}">Novo Registro</a>
                             <li><a href="{{ url('contato') }}">Contato</a></li>
-                            <li><a href="{{ url('/sobre') }}">Sobre</a></li>
-
+                            <li><a href="{{ url('/sobre') }}">Sobre</a></li>-->
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
