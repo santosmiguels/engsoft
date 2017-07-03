@@ -1,14 +1,14 @@
-UnBSnacks - PROJETO DE ENGENHARIA DE SOFTWARE
+#UnBSnacks - PROJETO DE ENGENHARIA DE SOFTWARE
+/n
+Universidade de Brasília – UnB /n
+Departamento de Ciência da Computação – CiC /n
+Engenharia de Software /n
+Profº Gustavo van Erven /n/n
 
-Universidade de Brasília – UnB
-Departamento de Ciência da Computação – CiC
-Engenharia de Software
-Profº Gustavo van Erven
-
-Alunos:
-Carlos Andre Velozo Trufini
-Felipe Garcia da Costa
-Geraldino Antônio da Silva
-Luciano Holanda Porto
-Maysa Meirelles Casella
-Miguel de Sousa Santos
+Alunos: /n
+Carlos Andre Velozo Trufini /n
+Felipe Garcia da Costa /n
+Geraldino Antônio da Silva /n
+Luciano Holanda Porto /n
+Maysa Meirelles Casella /n
+Miguel de Sousa Santos /n
