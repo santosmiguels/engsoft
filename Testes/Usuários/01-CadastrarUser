@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://unbsnacks.herokuapp.com/" />
+<title>cadastraruser</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">cadastraruser</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Cadastro/Acessar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Registro de novos usuários</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>UnB Snacks Teste 11</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>unbsnacksteste11@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password-confirm</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cTelefone</td>
+	<td>00000000000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cCPF</td>
+	<td>12345678911</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cNascimento</td>
+	<td>01/01/1980</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cCadastro</td>
+	<td>02/07/2017</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cUsuario</td>
+	<td>unbsnacks11</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cFoto</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=UnB Snacks Teste 11</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
