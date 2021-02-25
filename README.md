@@ -1,7 +1,6 @@
-# UnBSnacks 
+# UnBSnacks - Software 
 
 PROJETO DE ENGENHARIA DE SOFTWARE
-
 
 Universidade de Brasília – UnB
 
