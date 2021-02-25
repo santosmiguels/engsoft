@@ -1,14 +1,9 @@
 # UnBSnacks 
 
 PROJETO DE ENGENHARIA DE SOFTWARE
-
-
 Universidade de Brasília – UnB
-
 Departamento de Ciência da Computação – CiC
-
 Engenharia de Software
-
 Profº Gustavo van Erven
 
 # Alunos:
@@ -18,4 +13,3 @@ Profº Gustavo van Erven
 * Luciano Holanda Porto
 * Maysa Meirelles Casella
 * Miguel de Sousa Santos
-
