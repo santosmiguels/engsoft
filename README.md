@@ -1,4 +1,4 @@
-# UnBSnacks - Software 
+# Software Educacional - UnBSnacks
 
 PROJETO DE ENGENHARIA DE SOFTWARE
 
